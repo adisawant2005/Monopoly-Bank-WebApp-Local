@@ -1,4 +1,8 @@
 # Monopoly Bank
-This is a simple monopoly bank created by my brother [adisawant2005](https://github.com/adisawant2005) to teach me the basics of git and github
+This is a simple monopoly bank web app created by me to play monopoly more easyly
 
-![Screenshot 2024-08-15 235718](https://github.com/user-attachments/assets/a7725681-a550-4f36-afb6-11cd8d0cd57a)
+https://github.com/user-attachments/assets/cd5c7406-b772-46d5-a3e1-a9062be035c8
+
+# How to use this: 
+Step1: Make sure you have install [nodejs](https://nodejs.org/en/download/package-manager) installed in your pc
+
