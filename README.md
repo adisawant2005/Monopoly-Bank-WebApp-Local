@@ -6,9 +6,9 @@ https://github.com/user-attachments/assets/cd5c7406-b772-46d5-a3e1-a9062be035c8
 
 ## How to use this: 
 
-Step 1: Make sure you have install [nodejs](https://nodejs.org/en/download/package-manager) installed in your pc OR click on [here](https://nodejs.org/en/download/package-manager) to download.
+Step 1: Make sure you have install [Nodejs](https://nodejs.org/en/download/package-manager) & [Git Bash](https://git-scm.com/downloads) installed in your pc OR click on them to go to the download page.
 
-Step 2: Clone this repo in your pc.
+Step 2: Clone this repo in your pc. If using windows then open git bash & then clone it.
 ```bash
 git clone https://github.com/adisawant2005/Monopoly-Bank-WebApp-Local
 ```
