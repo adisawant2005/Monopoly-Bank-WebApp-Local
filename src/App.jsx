@@ -1,13 +1,13 @@
 import { useState } from "react";
-import Header from "./components/Header";
-import Main from "./components/Main";
-import Footer from "./components/Footer";
+import Header from "./pages/Header";
+import Main from "./pages/Main";
+import Footer from "./pages/Footer";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <div className="h-full w-full">
+    <div className="h-full w-full relative">
       <Header />
       <Main />
       <Footer />
