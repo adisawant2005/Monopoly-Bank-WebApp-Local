@@ -11,9 +11,17 @@ Step 2: Clone this repo in your pc
 ```bash
 git clone https://github.com/adisawant2005/Monopoly-Bank-WebApp-Local
 ```
+
 Step 3: Now go to the project folder and install node modules
 ```bash
-##Go to project directory
 cd Monopoly-Bank-WebApp-Local
 ```
+```bash
+npm install
+```
 
+Step 4: Start your project
+```bash
+npm run dev
+```
+Step 5: Go to the link given to you OR click [here](http://localhost:5173/) if you are done with all the steps above
