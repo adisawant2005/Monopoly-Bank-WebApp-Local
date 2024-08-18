@@ -4,6 +4,7 @@ This is a simple monopoly bank web app created by me to play Monopoly Game more 
 ## See this video below to understand the features
 https://github.com/user-attachments/assets/cd5c7406-b772-46d5-a3e1-a9062be035c8
 
+
 ## How to use this: 
 
 Step 1: Make sure you have install [Nodejs](https://nodejs.org/en/download/package-manager) & [Git Bash](https://git-scm.com/downloads) installed in your pc OR click on them to go to the download page.
@@ -26,6 +27,7 @@ Step 4: Start your project.
 npm run dev
 ```
 Step 5: Go to the link given in terminal OR click [here](http://localhost:5173/) if done with all the steps above.
+
 
 ## See the following video to start the projet
 https://github.com/user-attachments/assets/0a9f7a8e-ec5d-4349-958e-c0a00bcfe844
