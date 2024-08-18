@@ -26,3 +26,6 @@ Step 4: Start your project.
 npm run dev
 ```
 Step 5: Go to the link given in terminal OR click [here](http://localhost:5173/) if done with all the steps above.
+
+<a href="https://www.google.com" target="_blank">Click here to visit the site</a>
+
