@@ -32,7 +32,8 @@ Step 5: Go to the link given in terminal OR click [here](http://localhost:5173/)
 ## See the following video to start the projet
 https://github.com/user-attachments/assets/0a9f7a8e-ec5d-4349-958e-c0a00bcfe844
 
-
+## Project Details
+This is a simple React.js project
 
 
 
