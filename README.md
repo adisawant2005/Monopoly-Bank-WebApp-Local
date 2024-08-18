@@ -13,7 +13,7 @@ git clone https://github.com/adisawant2005/Monopoly-Bank-WebApp-Local
 ```
 Step 3: Now go to the project folder and install node modules
 ```bash
-#Go to project directory
+##Go to project directory
 cd Monopoly-Bank-WebApp-Local
 ```
 
