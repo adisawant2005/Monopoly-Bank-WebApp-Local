@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 const Header = () => {
   const [headerStyle, setHeaderStyle] = useState({
-    height: "100px",
+    height: "170px",
     transition: "height 0.3s, padding 0.3s",
   });
 
