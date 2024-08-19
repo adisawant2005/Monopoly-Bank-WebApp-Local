@@ -2,7 +2,9 @@
 This is a simple monopoly bank web app created by me to play Monopoly Game more easyly 😁✌️
 
 ## See this video below to understand the features
-https://github.com/user-attachments/assets/cd5c7406-b772-46d5-a3e1-a9062be035c8
+https://github.com/user-attachments/assets/db232209-cbcb-4ada-8e90-1959066fd5d8
+
+
 
 
 ## How to use this: 
