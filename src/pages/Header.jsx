@@ -8,10 +8,13 @@ const Header = () => {
 
   const handleScroll = () => {
     const scrollTop = window.scrollY; // Get current scroll position
-    setHeaderStyle({
-      height: `${210 - scrollTop}px`,
-      transition: "height 0.3s, padding 0.3s",
-    });
+    if (scrollTop < 50) {
+      setHeaderStyle({
+        height: `${210 - scrollTop}px`,
+        marginTop: `${scrollTop}px`,
+        transition: "height 0.3s, padding 0.3s",
+      });
+    }
   };
 
   useEffect(() => {
@@ -25,7 +28,7 @@ const Header = () => {
 
   return (
     <header
-      className="bg-red-700 w-full"
+      className="bg-red-500 w-full"
       style={headerStyle}
       onScroll={handleScroll}
     >

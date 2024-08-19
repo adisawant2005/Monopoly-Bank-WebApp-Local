@@ -1,4 +1,3 @@
-import BankComponent from "./BankComponent";
 import BankingPage from "./BankingPage";
 import AddCustomers from "./AddCustomers";
 import TransferMoney from "./TransferMoney";
@@ -11,7 +10,6 @@ import DefaultComponent from "./DefaultComponent";
 import FeaturePage from "./FeaturePage";
 
 export {
-  BankComponent,
   BankingPage,
   AddCustomers,
   TransferMoney,

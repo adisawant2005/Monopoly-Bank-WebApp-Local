@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Bank from "../modules/bankModule";
-import { FeaturePage } from ".";
+import { FeaturePage, ShowAllCustomersBalance } from ".";
 
 // Your updated Bank class here
 
@@ -138,11 +138,14 @@ export default function BankingPage() {
   console.log(allCustomers.keys);
 
   return (
-    <div className="p-8 max-w-full mx-auto bg-sky-100 text-gray-800 rounded-lg shadow-lg">
-      <h1 className="text-5xl font-medium text-green-700 mb-6 text-center">
+    <div className=" p-8 max-w-full mx-auto bg-sky-100 text-gray-800 rounded-lg shadow-lg">
+      <h1
+        className="text-6xl font-medium text-red-500 mb-6 text-center"
+        style={{ "text-shadow": "2px 2px 4px rgba(0, 0, 0, 0.5)" }}
+      >
         Welcome to Monopoly Bank
       </h1>
-      <div className="flex gap-6 mb-6">
+      <div className="flex gap-4  mb-6">
         <div>
           <ul className="flex flex-col gap-4">
             <li>
@@ -247,24 +250,8 @@ export default function BankingPage() {
           />
         </div>
         {/* All Customers Balance */}
-        <div className="bg-white flex flex-col p-6 rounded-lg shadow-md min-w-[300px]">
-          <h2 className="text-xl font-semibold mb-4">
-            All Customers & Balance
-          </h2>
-          <div className="text-2xl text-green-600 font-medium">
-            <ul>
-              {Object.entries(allCustomers).length === 0
-                ? "No customers added."
-                : Object.entries(allCustomers).map(([name, balance], index) => (
-                    <li key={name} className="block mb-1">
-                      <span className="w-1/3">
-                        {index + 1}&nbsp;{name}
-                      </span>
-                      <span className="w-2/3">: {balance}</span>
-                    </li>
-                  ))}
-            </ul>
-          </div>
+        <div className="max-w-[500px] min-w-[300px] h-full">
+          <ShowAllCustomersBalance allCustomers={allCustomers} />
         </div>
       </div>
     </div>
