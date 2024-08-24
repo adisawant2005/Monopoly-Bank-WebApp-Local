@@ -8,6 +8,7 @@ import CheckBalance from "./CheckBalance";
 import ResetData from "./ResetData";
 import DefaultComponent from "./DefaultComponent";
 import FeaturePage from "./FeaturePage";
+import Logs from "./Logs";
 
 export {
   BankingPage,
@@ -20,4 +21,5 @@ export {
   ResetData,
   DefaultComponent,
   FeaturePage,
+  Logs,
 };

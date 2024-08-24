@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Bank from "../modules/bankModule";
-import { FeaturePage, ShowAllCustomersBalance } from ".";
+import { FeaturePage, ShowAllCustomersBalance, Logs } from ".";
 
 // Your updated Bank class here
 
@@ -10,18 +10,15 @@ export default function BankingPage() {
   // State for Add Customer
   const [addCustomerName, setAddCustomerName] = useState("");
   const [initialBalance, setInitialBalance] = useState("");
-  const [addCustomerMessage, setAddCustomerMessage] = useState("");
 
   // State for Credit Money
   const [creditCustomerName, setCreditCustomerName] = useState("");
   const [creditAmount, setCreditAmount] = useState("");
-  const [creditMessage, setCreditMessage] = useState("");
   const [creditAllAmount, setCreditAllAmount] = useState("");
 
   // State for Debit Money
   const [debitCustomerName, setDebitCustomerName] = useState("");
   const [debitAmount, setDebitAmount] = useState("");
-  const [debitMessage, setDebitMessage] = useState("");
   const [debitAllAmount, setDebitAllAmount] = useState("");
 
   // State for Get Balance
@@ -32,7 +29,6 @@ export default function BankingPage() {
   const [transferSender, setTransferSender] = useState("");
   const [transferReceiver, setTransferReceiver] = useState("");
   const [transferAmount, setTransferAmount] = useState("");
-  const [transferMessage, setTransferMessage] = useState("");
 
   // State for All Customers
   const [allCustomers, setAllCustomers] = useState({});
@@ -44,6 +40,13 @@ export default function BankingPage() {
   // State to show the feature
   const [showFeature, setShowFeature] = useState("");
 
+  // State for all messages
+  const [messages, setMessages] = useState([]);
+  const [addCustomerMessage, setAddCustomerMessage] = useState("");
+  const [creditMessage, setCreditMessage] = useState("");
+  const [debitMessage, setDebitMessage] = useState("");
+  const [transferMessage, setTransferMessage] = useState("");
+
   // Handlers
   const handleAddCustomer = () => {
     const result = bank.addCustomer(
@@ -51,6 +54,7 @@ export default function BankingPage() {
       parseFloat(initialBalance)
     );
     setAddCustomerMessage(result);
+    setMessages(() => [...messages, result]);
     setAddCustomerName("");
     setInitialBalance("");
     updateAllCustomers();
@@ -62,6 +66,7 @@ export default function BankingPage() {
       parseFloat(creditAmount)
     );
     setCreditMessage(result);
+    setMessages(() => [...messages, result]);
     setCreditCustomerName("");
     setCreditAmount("");
     updateAllCustomers();
@@ -70,6 +75,7 @@ export default function BankingPage() {
   const handleCreditMoneyAll = () => {
     const result = bank.creditMoneyAll(parseFloat(creditAllAmount));
     setCreditMessage(result);
+    setMessages(() => [...messages, result]);
     setCreditAllAmount("");
     updateAllCustomers();
   };
@@ -77,6 +83,7 @@ export default function BankingPage() {
   const handleDebitMoney = () => {
     const result = bank.debitMoney(debitCustomerName, parseFloat(debitAmount));
     setDebitMessage(result);
+    setMessages(() => [...messages, result]);
     setDebitCustomerName("");
     setDebitAmount("");
     updateAllCustomers();
@@ -85,6 +92,7 @@ export default function BankingPage() {
   const handleDebitMoneyAll = () => {
     const result = bank.debitMoneyAll(parseFloat(debitAllAmount));
     setDebitMessage(result);
+    setMessages(() => [...messages, result]);
     setDebitAllAmount("");
     updateAllCustomers();
   };
@@ -102,6 +110,7 @@ export default function BankingPage() {
       parseFloat(transferAmount)
     );
     setTransferMessage(result);
+    setMessages(() => [...messages, result]);
     setTransferSender("");
     setTransferReceiver("");
     setTransferAmount("");
@@ -110,7 +119,9 @@ export default function BankingPage() {
 
   const updateAllCustomers = () => {
     const result = bank.getAllCustomers();
+    const messages = bank.getAllMessages();
     setAllCustomers(result);
+    setMessages(messages);
     setResetDataMessage("");
   };
 
@@ -123,6 +134,7 @@ export default function BankingPage() {
       // });
       setAllCustomers({});
       setResetDataValue("");
+      setMessages(["Bank reset successfully."]);
       setResetDataMessage("Bank reset successfully.");
       setAddCustomerMessage("");
       setCreditMessage("");
@@ -253,6 +265,9 @@ export default function BankingPage() {
         <div className="max-w-[500px] min-w-[300px] h-full">
           <ShowAllCustomersBalance allCustomers={allCustomers} />
         </div>
+      </div>
+      <div>
+        <Logs messages={messages} />
       </div>
     </div>
   );
