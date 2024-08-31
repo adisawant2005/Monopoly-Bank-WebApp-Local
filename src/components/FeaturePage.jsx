@@ -11,6 +11,7 @@ import {
 
 export default function FeaturePage({
   showFeature,
+  allCustomers,
   // Add Customer
   addCustomerName,
   setAddCustomerName,
@@ -48,8 +49,6 @@ export default function FeaturePage({
   handleTransferMoney,
   transferMessage,
   // Check Balance
-  balanceCustomerName,
-  setBalanceCustomerName,
   handleGetBalance,
   balance,
   // Reset Data
@@ -73,6 +72,7 @@ export default function FeaturePage({
     case "Credit_Money":
       return (
         <CreditMoney
+          allCustomers={allCustomers}
           creditCustomerName={creditCustomerName}
           setCreditCustomerName={setCreditCustomerName}
           creditAmount={creditAmount}
@@ -87,6 +87,7 @@ export default function FeaturePage({
     case "Debit_Money":
       return (
         <DebitMoney
+          allCustomers={allCustomers}
           debitCustomerName={debitCustomerName}
           setDebitCustomerName={setDebitCustomerName}
           debitAmount={debitAmount}
@@ -101,6 +102,7 @@ export default function FeaturePage({
     case "Transfer_Money":
       return (
         <TransferMoney
+          allCustomers={allCustomers}
           transferSender={transferSender}
           setTransferSender={setTransferSender}
           transferReceiver={transferReceiver}
@@ -114,8 +116,7 @@ export default function FeaturePage({
     case "Check_Balance":
       return (
         <CheckBalance
-          balanceCustomerName={balanceCustomerName}
-          setBalanceCustomerName={setBalanceCustomerName}
+          allCustomers={allCustomers}
           handleGetBalance={handleGetBalance}
           balance={balance}
         />

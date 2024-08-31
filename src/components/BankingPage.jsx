@@ -22,7 +22,6 @@ export default function BankingPage() {
   const [debitAllAmount, setDebitAllAmount] = useState("");
 
   // State for Get Balance
-  const [balanceCustomerName, setBalanceCustomerName] = useState("");
   const [balance, setBalance] = useState("");
 
   // State for Transfer Money
@@ -97,10 +96,9 @@ export default function BankingPage() {
     updateAllCustomers();
   };
 
-  const handleGetBalance = () => {
-    const result = bank.getBalance(balanceCustomerName);
+  const handleGetBalance = (name) => {
+    const result = bank.getBalance(name);
     setBalance(result);
-    setBalanceCustomerName("");
   };
 
   const handleTransferMoney = () => {
@@ -213,6 +211,7 @@ export default function BankingPage() {
         <div className="w-3/5">
           <FeaturePage
             showFeature={showFeature}
+            allCustomers={allCustomers}
             // Add Customer
             addCustomerName={addCustomerName}
             setAddCustomerName={setAddCustomerName}
@@ -250,8 +249,6 @@ export default function BankingPage() {
             handleTransferMoney={handleTransferMoney}
             transferMessage={transferMessage}
             // Check Balance
-            balanceCustomerName={balanceCustomerName}
-            setBalanceCustomerName={setBalanceCustomerName}
             handleGetBalance={handleGetBalance}
             balance={balance}
             // Reset Data
@@ -266,9 +263,11 @@ export default function BankingPage() {
           <ShowAllCustomersBalance allCustomers={allCustomers} />
         </div>
       </div>
-      <div>
-        <Logs messages={messages} />
-      </div>
+      {messages.length > 0 && (
+        <div>
+          <Logs messages={messages} />
+        </div>
+      )}
     </div>
   );
 }

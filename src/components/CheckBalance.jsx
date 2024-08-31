@@ -1,34 +1,60 @@
-import React from "react";
+import { useState } from "react";
 
 export default function CheckBalance({
-  balanceCustomerName,
-  setBalanceCustomerName,
+  allCustomers,
   handleGetBalance,
   balance,
 }) {
+  const [selectedPlayer, setSelectedPlayer] = useState("");
+
+  const handleChange = (e) => {
+    const playerName = e.target.value;
+    setSelectedPlayer(playerName);
+    handleGetBalance(playerName);
+  };
+
   return (
-    <>
-      {/* Check Balance */}
-      <div className="bg-white flex flex-col p-6 rounded-lg shadow-md w-full">
-        <h2 className="text-xl font-semibold mb-4">Get Balance</h2>
-        <div className="w-full">
-          <span className="font-medium">Player Name</span>
-          <input
-            type="text"
-            value={balanceCustomerName}
-            onChange={(e) => setBalanceCustomerName(e.target.value)}
-            placeholder="Player Name"
-            className="border border-gray-300 rounded-md w-full px-4 py-2 mb-4 text-gray-800 focus:ring-2 focus:ring-green-500"
-          />
-        </div>
-        <button
-          onClick={handleGetBalance}
-          className="bg-green-500 text-white font-medium rounded-md px-6 py-2 hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500"
-        >
-          Get Balance
-        </button>
-        <p className="mt-4 text-green-700">{balance}</p>
-      </div>
-    </>
+    <div className="bg-white flex flex-col p-6 rounded-lg shadow-md w-full">
+      <h2 className="text-xl font-semibold mb-4">Get Balance</h2>
+
+      {Object.entries(allCustomers).length === 0 ? (
+        <span className="text-2xl font-semibold text-green-600">
+          Add Players To Check Balances
+        </span>
+      ) : (
+        <>
+          <div className="mb-2">
+            {/* <label htmlFor="player" className="text-xl"></label> */}
+            <select
+              id="player"
+              name="player_name"
+              value={selectedPlayer}
+              onChange={handleChange}
+              className={`${
+                selectedPlayer !== ""
+                  ? "bg-blue-200 border-blue-200 hover:border-blue-400"
+                  : "bg-yellow-200 border-yellow-200 hover:border-yellow-400"
+              } w-52 h-10 px-2 py-1 text-2xl border-2  rounded-xl outline-none`}
+            >
+              <option value="" disabled>
+                --Select Player--
+              </option>
+              {Object.entries(allCustomers).map(([name, balance], index) => (
+                <option key={index} value={name}>
+                  {name}
+                </option>
+              ))}
+            </select>
+          </div>
+          {balance !== "" ? (
+            <span className="mt-4 text-xl text-green-600 font-medium">
+              {balance}
+            </span>
+          ) : (
+            ""
+          )}
+        </>
+      )}
+    </div>
   );
 }
