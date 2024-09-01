@@ -5,7 +5,7 @@ export default function Logs({ messages }) {
     <>
       {/* Logs */}
       <div className="bg-white flex flex-col p-6 rounded-lg shadow-md w-full">
-        <h2 className="text-xl font-semibold mb-4">Logs</h2>
+        <h2 className="text-xl font-semibold mb-4">Bank Logs</h2>
 
         <ul className="w-full max-h-64 overflow-y-auto">
           {messages.map((m, i) => (

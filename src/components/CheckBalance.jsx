@@ -47,7 +47,7 @@ export default function CheckBalance({
             </select>
           </div>
           {balance !== "" ? (
-            <span className="mt-4 text-xl text-green-600 font-medium">
+            <span className="mt-4 text-3xl text-green-600 font-medium">
               {balance}
             </span>
           ) : (

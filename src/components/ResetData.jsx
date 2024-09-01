@@ -20,7 +20,7 @@ export default function ResetData({
             value={resetDataValue}
             onChange={(e) => setResetDataValue(e.target.value)}
             placeholder="Player Name"
-            className="border border-gray-300 rounded-md w-full px-4 py-2 mb-4 text-gray-800 focus:ring-2 focus:ring-green-500"
+            className="border border-gray-300 rounded-md w-full text-xl px-4 py-2 mb-4 text-gray-800 focus:ring-2 focus:ring-green-500"
           />
         </div>
         <button

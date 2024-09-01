@@ -62,9 +62,9 @@ export default function DebitMoney({
                 placeholder="Amount"
                 className={`${
                   debitAmount > allCustomers[debitCustomerName]
-                    ? "bg-red-200"
+                    ? "bg-red-400"
                     : ""
-                } border border-gray-300 rounded-md px-4 py-2 w-full text-gray-800 focus:ring-2 focus:ring-green-500`}
+                } border border-gray-300 rounded-md px-4 py-2 mb-4 w-full text-xl text-gray-800 focus:ring-2 focus:ring-green-500`}
               />
             </div>
             <button
@@ -80,7 +80,7 @@ export default function DebitMoney({
                 value={debitAllAmount}
                 onChange={(e) => setDebitAllAmount(e.target.value)}
                 placeholder="Debit Amount From All"
-                className=" border border-gray-300 rounded-md px-4 py-2 w-full text-gray-800 focus:ring-2 focus:ring-green-500"
+                className=" border border-gray-300 rounded-md px-4 py-2 w-full text-xl text-gray-800 focus:ring-2 focus:ring-green-500"
               />
             </div>
             <button
@@ -89,7 +89,9 @@ export default function DebitMoney({
             >
               Debit All Customers
             </button>
-            <p className="mt-4 text-green-700">{debitMessage}</p>
+            <p className="mt-4 text-xl text-green-600 font-medium">
+              {debitMessage}
+            </p>
           </>
         )}
       </div>

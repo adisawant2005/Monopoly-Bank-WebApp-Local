@@ -61,7 +61,7 @@ export default function CreditMoney({
                 value={creditAmount}
                 onChange={(e) => setCreditAmount(e.target.value)}
                 placeholder="Amount"
-                className="border border-gray-300 rounded-md px-4 py-2 mb-4 w-full text-gray-800 focus:ring-2 focus:ring-green-500"
+                className="border border-gray-300 rounded-md px-4 py-2 mb-4 w-full text-xl text-gray-800 focus:ring-2 focus:ring-green-500"
               />
             </div>
             <button
@@ -77,7 +77,7 @@ export default function CreditMoney({
                 value={creditAllAmount}
                 onChange={(e) => setCreditAllAmount(e.target.value)}
                 placeholder="Credit Amount To All"
-                className="border border-gray-300 rounded-md px-4 py-2 w-full text-gray-800 focus:ring-2 focus:ring-green-500"
+                className="border border-gray-300 rounded-md px-4 py-2 w-full text-xl text-gray-800 focus:ring-2 focus:ring-green-500"
               />
             </div>
             <button
