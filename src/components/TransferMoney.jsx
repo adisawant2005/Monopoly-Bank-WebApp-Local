@@ -82,7 +82,11 @@ export default function TransferMoney({
                   </option>
                   {Object.entries(allCustomers).map(
                     ([name, balance], index) => (
-                      <option key={index} value={name}>
+                      <option
+                        key={index}
+                        value={name}
+                        className="font-semibold"
+                      >
                         {name}
                       </option>
                     )
