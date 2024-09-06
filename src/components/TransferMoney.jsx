@@ -36,19 +36,28 @@ export default function TransferMoney({
                     transferSender !== ""
                       ? "bg-blue-200 border-blue-200 hover:border-blue-400"
                       : "bg-yellow-200 border-yellow-200 hover:border-yellow-400"
-                  } w-52 h-10 px-2 py-1 text-2xl border-2  rounded-xl outline-none`}
+                  } font-semibold w-60 h-10 px-2 py-1 text-2xl border-2  rounded-xl outline-none`}
                 >
                   <option value="" disabled>
                     --Select Player--
                   </option>
                   {Object.entries(allCustomers).map(
                     ([name, balance], index) => (
-                      <option key={index} value={name}>
+                      <option
+                        key={index}
+                        value={name}
+                        className="font-semibold"
+                      >
                         {name}
                       </option>
                     )
                   )}
-                  <option value="All Players">All Players</option>
+                  <option
+                    value="All Players"
+                    className=" font-semibold text-blue-800"
+                  >
+                    All Players
+                  </option>
                 </select>
               </div>
             </div>
@@ -66,7 +75,7 @@ export default function TransferMoney({
                     transferReceiver !== ""
                       ? "bg-blue-200 border-blue-200 hover:border-blue-400"
                       : "bg-yellow-200 border-yellow-200 hover:border-yellow-400"
-                  } w-52 h-10 px-2 py-1 text-2xl border-2  rounded-xl outline-none`}
+                  } font-semibold w-60 h-10 px-2 py-1 text-2xl border-2  rounded-xl outline-none`}
                 >
                   <option value="" disabled>
                     --Select Player--
