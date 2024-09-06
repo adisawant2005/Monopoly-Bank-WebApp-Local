@@ -161,7 +161,7 @@ export default function BankingPage() {
             <li>
               <button
                 onClick={() => setShowFeature("Add_Customer")}
-                className="bg-sky-500 text-center w-60 text-2xl font-medium text-white rounded-md px-6 py-2 hover:bg-sky-600 focus:outline-none focus:ring-2 focus:ring-sky-500"
+                className="bg-sky-500 text-center w-60 text-2xl font-medium text-white rounded-md px-6 py-2 hover:bg-sky-600 focus:outline-none focus:ring-2 focus:ring-sky-500 hover:-translate-x-2 hover:-translate-y-1 duration-200 transition"
               >
                 Add Player
               </button>
@@ -169,7 +169,7 @@ export default function BankingPage() {
             <li>
               <button
                 onClick={() => setShowFeature("Credit_Money")}
-                className="bg-lime-500 text-center w-60 text-2xl font-medium text-white rounded-md px-6 py-2 hover:bg-lime-600 focus:outline-none focus:ring-2 focus:ring-lime-500"
+                className="bg-lime-500 text-center w-60 text-2xl font-medium text-white rounded-md px-6 py-2 hover:bg-lime-600 focus:outline-none focus:ring-2 focus:ring-lime-500 hover:-translate-x-2 hover:-translate-y-1 duration-200 transition"
               >
                 Credit Money
               </button>
@@ -177,7 +177,7 @@ export default function BankingPage() {
             <li>
               <button
                 onClick={() => setShowFeature("Debit_Money")}
-                className="bg-yellow-500 text-center w-60 text-2xl font-medium text-white rounded-md px-6 py-2 hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                className="bg-yellow-500 text-center w-60 text-2xl font-medium text-white rounded-md px-6 py-2 hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-500 hover:-translate-x-2 hover:-translate-y-1 duration-200 transition"
               >
                 Debit Money
               </button>
@@ -185,7 +185,7 @@ export default function BankingPage() {
             <li>
               <button
                 onClick={() => setShowFeature("Transfer_Money")}
-                className="bg-blue-500 text-center w-60 text-2xl font-medium text-white rounded-md px-6 py-2 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="bg-blue-500 text-center w-60 text-2xl font-medium text-white rounded-md px-6 py-2 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 hover:-translate-x-2 hover:-translate-y-1 duration-200 transition"
               >
                 Transfer Money
               </button>
@@ -193,7 +193,7 @@ export default function BankingPage() {
             <li>
               <button
                 onClick={() => setShowFeature("Check_Balance")}
-                className="bg-green-500 text-center w-60 text-2xl font-medium text-white rounded-md px-6 py-2 hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500"
+                className="bg-green-500 text-center w-60 text-2xl font-medium text-white rounded-md px-6 py-2 hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 hover:-translate-x-2 hover:-translate-y-1 duration-200 transition"
               >
                 Check Balance
               </button>
@@ -201,7 +201,7 @@ export default function BankingPage() {
             <li>
               <button
                 onClick={() => setShowFeature("Clear_Data")}
-                className="bg-red-500 text-center w-60 text-2xl font-medium text-white rounded-md px-6 py-2 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500"
+                className="bg-red-500 text-center w-60 text-2xl font-medium text-white rounded-md px-6 py-2 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500 hover:-translate-x-2 hover:-translate-y-1 duration-200 transition"
               >
                 Reset Bank
               </button>
