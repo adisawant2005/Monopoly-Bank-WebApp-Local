@@ -92,7 +92,7 @@ export default class Bank {
   }
 
   transferMoney(sender, receiver, amount) {
-    if (!this.customers[sender]) {
+    if (!this.customers[sender] && sender !== "All Players") {
       return `Sender "${sender}" does not exist.`;
     } else if (!this.customers[receiver]) {
       return `Receiver "${receiver}" does not exist.`;
@@ -102,9 +102,17 @@ export default class Bank {
       return "Amount to transfer must be positive.";
     } else if (this.customers[sender] < amount) {
       return `Insufficient funds for "${sender}". Current balance is "$${this.customers[sender]}".`;
+    } else if (sender === "All Players") {
+      Object.entries(this.customers).forEach(([name, balance], index) => {
+        if (name !== receiver) {
+          this.customers[name] -= amount;
+          this.customers[receiver] += amount;
+        }
+      });
+    } else {
+      this.customers[sender] -= amount;
+      this.customers[receiver] += amount;
     }
-    this.customers[sender] -= amount;
-    this.customers[receiver] += amount;
     const time = new Date().toLocaleString();
     const message = `Transferred "$${amount}" from "${sender}" to "${receiver}" at "${time}".`;
     this.messages.push(message);

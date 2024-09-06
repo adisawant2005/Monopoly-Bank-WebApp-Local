@@ -48,6 +48,7 @@ export default function TransferMoney({
                       </option>
                     )
                   )}
+                  <option value="All Players">All Players</option>
                 </select>
               </div>
             </div>
